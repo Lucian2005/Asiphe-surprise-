@@ -27,11 +27,12 @@
         #image-container {
             display: none;
         }
-        #image {
+        iframe {
             display: none;
             width: 100%;
             max-width: 600px;
             height: auto;
+            border: none;
         }
     </style>
     <script>
@@ -45,9 +46,9 @@
             document.getElementById('image-container').style.display = 'block';
             setTimeout(() => {
                 document.getElementById('reveal').innerText = "Here’s your surprise!";
-                let img = document.getElementById('image');
-                img.style.display = 'block';
-            }, 2000); // Delay image reveal by 2 seconds
+                let iframe = document.getElementById('image');
+                iframe.style.display = 'block';
+            }, 2000); // Delay reveal by 2 seconds
         }
     </script>
 </head>
@@ -70,11 +71,8 @@
 
     <div id="image-container">
         <p id="reveal">Loading...</p>
-        <img id="image" src="https://drive.google.com/uc?export=view&id=1ADfRYmpdRNV1NkBV3QyrPORf1XbWFFsu" alt="Surprise Image">
+        <iframe id="image" src="https://drive.google.com/file/d/1ADfRYmpdRNV1NkBV3QyrPORf1XbWFFsu/preview" allowfullscreen></iframe>
     </div>
 
 </body>
 </html>
-
-
- 
