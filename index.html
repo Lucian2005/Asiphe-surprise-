@@ -27,6 +27,12 @@
         #image-container {
             display: none;
         }
+        #image {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
     </style>
     <script>
         function nextStep(step) {
@@ -39,7 +45,8 @@
             document.getElementById('image-container').style.display = 'block';
             setTimeout(() => {
                 document.getElementById('reveal').innerText = "Here’s your surprise!";
-                document.getElementById('image').style.display = 'block';
+                let img = document.getElementById('image');
+                img.style.display = 'block';
             }, 2000); // Delay image reveal by 2 seconds
         }
     </script>
@@ -63,8 +70,11 @@
 
     <div id="image-container">
         <p id="reveal">Loading...</p>
-        <img id="image" src="https://drive.google.com/uc?export=view&id=1ADfRYmpdRNV1NkBV3QyrPORf1XbWFFsu" alt="Surprise Image" style="display: none; width: 80%; max-width: 500px;">
+        <img id="image" src="https://drive.google.com/uc?export=view&id=1ADfRYmpdRNV1NkBV3QyrPORf1XbWFFsu" alt="Surprise Image">
     </div>
 
 </body>
 </html>
+
+
+ 
